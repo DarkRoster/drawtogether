@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Draw Together</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/8523cd3d11.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#"><h1 id="site-name">Draw Together</h1></a>
+        <ul>
+          <li><a href="/" class="a-animated">Ana Sayfa</a></li>
+          <li><a href="/kayitOl" class="a-animated">Kayıt Ol</a></li>
+          <li><a href="#" class="a-animated">Hakkımızda</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <h1 id="h1-welcome" style="text-align: center">
+      Draw Together'a Hoşgeldiniz
+    </h1>
+    <div id="trailer-container">
+      <div id="welcome-sentence">
+        <br />
+        <p id="p-welcome">
+          Draw Together kişilerin sıra ile belirlenen bir resmi çizerek
+          eğlendikleri bir oyundur. Oyunun amacı belirlenen resmi en iyi
+          çizmektir. Oyunun sonunda en iyi çizen olarak belirlenen kişi kazanır.
+        </p>
+      </div>
+      <img id="img-welcome" src="./project-gif.gif" alt="Game GIF" />
+    </div>
+
+    <hr />
+
+    <main>
+      <div class="container">
+        <h1>Draw Together</h1>
+        <form action="/" method="POST">
+          <input
+            type="text"
+            placeholder="Kullanıcı Adı"
+            name="username"
+            required
+          />
+          <input type="password" placeholder="Şifre" name="password" required />
+          <button type="submit">Giriş Yap</button>
+        </form>
+        <p>
+          Kayıt olmak için
+          <a href="/kayitOl" class="a-animated">buraya tıklayın</a>.
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <a href="https://www.linkedin.com/in/furkansenresmi/" target="_blank"
+        ><i class="fa-brands fa-linkedin-in fa-xl"></i
+      ></a>
+      <a href="https://github.com/DarkRoster" target="_blank"
+        ><i class="fa-brands fa-github fa-xl"></i
+      ></a>
+    </footer>
+  </body>
+</html>

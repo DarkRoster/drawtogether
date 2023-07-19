@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Draw Together</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+      body {
+        position: relative;
+        padding-bottom: 25px;
+      }
+
+      .canvas-container {
+        position: relative;
+      }
+
+      #roomForm {
+        position: absolute;
+        left: 50%;
+        bottom: 100px;
+        transform: translateX(-50%);
+      }
+
+      #startGameButton {
+        position: absolute;
+        top: calc(50% - 300px);
+        left: calc(50% - 75px);
+        width: 150px;
+        height: 50px;
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/8523cd3d11.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#"><h1 id="site-name">Draw Together</h1></a>
+        <ul>
+          <li><a href="/" class="a-animated">Ana Sayfa</a></li>
+          <li><a href="/kayitOl" class="a-animated">Kayıt Ol</a></li>
+          <li><a href="#" class="a-animated">Hakkımızda</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <p id="countdown" style="margin-top: 6rem">20</p>
+
+    <div class="canvas-container">
+      <canvas id="canvas" width="500px" height="500px"></canvas>
+
+      <div class="color-options">
+        <div class="brush-size-options">
+          <button id="small-brush" class="brush-size-button">K</button>
+          <button id="medium-brush" class="brush-size-button">O</button>
+          <button id="large-brush" class="brush-size-button">B</button>
+        </div>
+        <div class="color-option" style="background-color: #f3ebe4"></div>
+        <div class="color-option" style="background-color: blue"></div>
+        <div class="color-option" style="background-color: red"></div>
+        <div class="color-option" style="background-color: green"></div>
+      </div>
+
+      <div class="canvas-overlay"></div>
+    </div>
+    <form id="roomForm">
+      <label for="roomName">Oda Kodunu Girin:</label>
+      <input type="text" id="roomName" name="roomName" required />
+      <input type="submit" value="Odaya Katıl" />
+    </form>
+
+    <button id="startGameButton" style="margin: auto; width: 200px" disabled>
+      Oyuna Başla
+    </button>
+
+    <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

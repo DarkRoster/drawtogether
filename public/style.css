@@ -1,0 +1,255 @@
+/* Örnek stil kodları */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  background-color: #1e2022;
+  color: #f0f5f9;
+  font-family: "Lobster", cursive;
+}
+
+a {
+  color: #f0f5f9;
+  text-decoration: none;
+}
+
+header {
+  padding: 2rem;
+  padding-right: 5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  padding-top: 1rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: right; /* Sağa dayalı hizalama */
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 10px; /* Linkler arasındaki boşluk */
+  margin-right: 3rem;
+}
+
+nav ul li a {
+  color: #f0f5f9;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.a-animated {
+  /* Yeni eklenen kodlar */
+  position: relative; /* Üstteki elemente göre konumlandırma */
+  overflow: hidden; /* Sınır dışına taşan kısımları gizleme */
+}
+
+.a-animated::after {
+  content: ""; /* Boş bir içerik oluşturma */
+  position: absolute; /* Mutlak konumlandırma */
+  bottom: 0; /* Alt kenara hizalama */
+  left: 0; /* Sol kenara hizalama */
+  width: 0; /* Başlangıçta genişlik sıfır */
+  height: 2px; /* Çizginin kalınlığı */
+  background-color: #f0f5f9; /* Çizginin rengi */
+  transition: width 0.3s ease-in-out; /* Genişliği animasyonla değiştirme */
+}
+
+.a-animated:hover::after {
+  width: 100%; /* Hover durumunda genişliği tam yapma */
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+form input {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Yeni düzenlemeler */
+
+form .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+form .form-group label {
+  margin-bottom: 5px;
+}
+
+form .form-group input {
+  width: 100%;
+}
+
+form .form-group:last-child {
+  margin-bottom: 0;
+}
+
+.canvas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 50px); /* Canvas'ı 50px aşağısında hizala */
+  position: relative;
+  z-index: 0;
+}
+
+canvas {
+  display: block;
+  background-color: #f3ebe4;
+  border: 1px solid #000;
+  cursor: crosshair;
+  width: 500px;
+  height: 500px;
+}
+
+.color-options {
+  position: absolute;
+  top: 50%;
+  right: 25%;
+  transform: translateY(-50%);
+}
+
+.color-option {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+#colorPalette {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.color {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.circle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#countdown {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#trailer-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  height: 500px;
+}
+
+#welcome-sentence {
+  height: 25rem;
+  color: white;
+  margin-top: 10rem;
+}
+
+#img-welcome {
+  width: 25%;
+  height: 75%;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  /*Align image to right*/
+  float: right;
+  border-radius: 5%;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+  background-color: #2b3338;
+  padding: 30px;
+}
+
+footer i {
+  margin-right: 20px;
+}
+
+#site-name {
+  margin-left: 2rem;
+}
+
+#h1-welcome {
+  font-size: 75px;
+}
+
+#p-welcome {
+  font-size: 25px;
+  /* text width*/
+  width: 75%;
+  margin-left: 10rem;
+}
+
+.brush-size-options {
+  margin-bottom: 2rem;
+}
+
+.brush-size-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.brush-size-button:hover {
+  background-color: #ddd;
+}
