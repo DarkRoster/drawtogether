@@ -8,8 +8,6 @@ Draw Together, hem yaratıcılığınızı hem de eğlencenizi arttırmak için 
 
 ## Kurulum
 
-Projenizi nasıl kuracaklarını anlatın.
-
 ```bash
 # Gerekli paketleri yükleyin
 npm install
